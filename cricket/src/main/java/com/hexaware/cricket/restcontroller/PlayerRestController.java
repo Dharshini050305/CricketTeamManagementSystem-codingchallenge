@@ -42,11 +42,7 @@ public class PlayerRestController {
 			
 		  PlayerDTO playerDTO = service.getById( playerId);
 		  
-		  if(playerDTO == null) {
-			  
-			 
-			  
-		  }
+		
 		  return playerDTO;
 		  
 	}  
