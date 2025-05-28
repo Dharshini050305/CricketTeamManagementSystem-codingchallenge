@@ -7,7 +7,7 @@ public class PlayerDTO {
 	    private String role;
 		public PlayerDTO() {
 			super();
-			// TODO Auto-generated constructor stub
+			
 		}
 		public PlayerDTO(int playerId, String playerName, int jerseyNumber, String role) {
 			super();

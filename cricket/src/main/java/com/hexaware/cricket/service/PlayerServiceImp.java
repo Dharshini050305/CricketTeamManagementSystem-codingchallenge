@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.hexaware.cricket.dto.PlayerDTO;
 import com.hexaware.cricket.entity.Player;
+import com.hexaware.cricket.exception.PlayerNotFoundException;
 import com.hexaware.cricket.repository.PlayerRepository;
 
 @Service
@@ -35,8 +36,10 @@ public class PlayerServiceImp implements IPlayerService{
 
 	@Override
 	public String deletePlayerById(int playerId) {
+		Player player = repo.findById(playerId).orElseThrow(() -> new PlayerNotFoundException("Player not found with id: " + playerId));
 		repo.deleteById(playerId);
-		return "Player Deleted successfully Playerid: " +playerId;
+		 
+		return "Player Deleted successfully Player id: " +playerId;
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public class PlayerRestController {
 	IPlayerService service;
 	
 	@PostMapping
-		public  Player  addEmp(@RequestBody  Player player) {
+		public  Player  addPlayer(@RequestBody  Player player) {
 			
 			  return service.addPlayer(player);
 			
@@ -44,7 +44,7 @@ public class PlayerRestController {
 		  
 		  if(playerDTO == null) {
 			  
-			  throw  new PlayerNotFoundException();
+			 
 			  
 		  }
 		  return playerDTO;
@@ -54,9 +54,12 @@ public class PlayerRestController {
 		
 	
 	@DeleteMapping("/:{playerId}")
-	public String deletePlayerById(@PathVariable int playerId) {
+	public String deletePlayerById(@PathVariable int playerId) throws PlayerNotFoundException {
+
 		
 		return service.deletePlayerById(playerId);
+		
+		
 	}
 	
 	
