@@ -1,0 +1,13 @@
+<p>search works!</p>
+<div *ngIf="player; else notFound">
+  <table class="table table-bordered">
+    <tr><th>Player ID</th><td>{{ player.playerId }}</td></tr>
+    <tr><th>Name</th><td>{{ player.playerName }}</td></tr>
+    <tr><th>Jersey Number</th><td>{{ player.jerseyNumber }}</td></tr>
+    <tr><th>Role</th><td>{{ player.role }}</td></tr>
+  </table>
+</div>
+
+<ng-template #notFound>
+  <p style="color: red;" *ngIf="errorMsg">{{ errorMsg }}</p>
+</ng-template>

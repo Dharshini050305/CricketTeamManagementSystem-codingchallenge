@@ -1,0 +1,9 @@
+body {
+  background-color: #fff9c4; /* soft light yellow */
+  font-family: Arial, sans-serif;
+}
+.main-heading {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}

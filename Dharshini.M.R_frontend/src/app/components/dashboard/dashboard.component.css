@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #007bff;
+  padding: 15px;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.logo-image {
+  width: 120px;       /* Reduced size */
+  height: auto;       /* Keeps aspect ratio */
+  display: block;
+  margin: 20px auto;
+}

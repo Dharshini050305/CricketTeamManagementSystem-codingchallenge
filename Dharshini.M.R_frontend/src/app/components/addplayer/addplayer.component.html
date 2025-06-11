@@ -1,0 +1,49 @@
+<p>addplayer works!</p>
+
+<form #playerForm="ngForm" method="post" class="container col-md-5" (ngSubmit)="insertPlayer(playerForm.value)">
+
+  <div class="form-group">
+    <label>Player Name:</label>
+    <input type="text" class="form-control" name="playerName" #nameCtrl="ngModel" required ngModel>
+    <span style="color: red;" *ngIf="nameCtrl.touched && nameCtrl.invalid">Player Name is required</span>
+  </div>
+
+  <div class="form-group">
+    <label>Jersey Number:</label>
+    <input type="number" class="form-control" name="jerseyNumber" #jerseyCtrl="ngModel" required ngModel>
+    <span style="color: red;" *ngIf="jerseyCtrl.touched && jerseyCtrl.invalid">Jersey Number is required</span>
+  </div>
+
+  <div class="form-group">
+    <label>Role:</label>
+    <input type="text" class="form-control" name="role" #roleCtrl="ngModel" required ngModel>
+    <span style="color: red;" *ngIf="roleCtrl.touched && roleCtrl.invalid">Role is required</span>
+  </div>
+
+  <div class="form-group">
+    <label>Total Matches:</label>
+    <input type="number" class="form-control" name="totalMatches" #matchesCtrl="ngModel" required ngModel>
+    <span style="color: red;" *ngIf="matchesCtrl.touched && matchesCtrl.invalid">Total Matches is required</span>
+  </div>
+
+  <div class="form-group">
+    <label>Team Name:</label>
+    <input type="text" class="form-control" name="teamName" #teamCtrl="ngModel" required ngModel>
+    <span style="color: red;" *ngIf="teamCtrl.touched && teamCtrl.invalid">Team Name is required</span>
+  </div>
+
+  <div class="form-group">
+    <label>Country:</label>
+    <input type="text" class="form-control" name="country" #stateCtrl="ngModel" required ngModel>
+    <span style="color: red;" *ngIf="stateCtrl.touched && stateCtrl.invalid">Country is required</span>
+  </div>
+
+  <div class="form-group">
+    <label>Description:</label>
+    <textarea class="form-control" name="description" #descCtrl="ngModel" required ngModel></textarea>
+    <span style="color: red;" *ngIf="descCtrl.touched && descCtrl.invalid">Description is required</span>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="playerForm.invalid">Submit</button>
+
+</form>

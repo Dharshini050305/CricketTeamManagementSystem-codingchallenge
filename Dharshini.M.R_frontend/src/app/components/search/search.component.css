@@ -1,0 +1,17 @@
+table {
+  background-color: #ffffe0; /* light yellow */
+  width: 50%;
+  margin: 20px auto; /* center horizontally */
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background-color: #f0e68c; /* khaki header */
+  text-align: left;
+}
